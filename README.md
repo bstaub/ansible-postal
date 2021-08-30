@@ -119,10 +119,10 @@ While having the network configuration open in your browser window, you will wan
 <img src="./.github/assets/05-NetworkConfigDetail.png" alt="Config Detail">
 
 ### Connect via SSH
-Replace `mypostalserver.mydomain.test` with the DNS name that you chose.
+Replace `postal01test.arcmedia.ch` with the DNS name that you chose.
 
 ```sh
-ssh root@mypostalserver.mydomain.test
+ssh root@postal01test.arcmedia.ch
 ```
 ### Clear your current configuration
 Since we can copy and paste from Vultr, the easiest is to just clear the current configuration. Run these commands on your server.
@@ -174,12 +174,12 @@ Repo can be placed anywhere on your system. Just choose a location that works be
 There are three areas that you need to configure:
 
 ### "hosts" file in the Ansible repo
-You will see under the `[postal]` group, there is a place holder of `mypostalserver.mydomain.test` change this line to match the properly configured DNS name that points to your server's main IP address.
+You will see under the `[postal]` group, there is a place holder of `postal01test.arcmedia.ch` change this line to match the properly configured DNS name that points to your server's main IP address.
 
 ### "group_vars/all" (variables that will apply to all of your servers)
 Modify this file to your satisfaction. Follow the comments in the file of what needs to be modified.
 
-### "host_vars/mypostalserver.mydomain.test"
+### "host_vars/postal01test.arcmedia.ch"
 Rename this file to match exactly what you have it set to in the "hosts" file within the Ansible repo. Open this file and modify it according to the comments.
 
 ## Run the Ansible playbook (from your machine -- not the server)
@@ -195,14 +195,14 @@ ansible-playbook -i /path/to/your/downloaded-repo/hosts /path/to/your/downloaded
 After your server is finished deploying, validate the following functions:
 
 ### Web GUI should load and have a valid SSL certificate
-Visit https://mypostalserver.mydomain.test and see if your page loads. Make sure the SSL is valid.
+Visit https://postal01test.arcmedia.ch and see if your page loads. Make sure the SSL is valid.
 
 <img src="./.github/assets/06-ValidSSL.png" alt="Valid SSL">
 
 ### SMTP port should support TLS
-Run the following command. Replace `mypostalserver.mydomain.test` with the DNS name that you chose.
+Run the following command. Replace `postal01test.arcmedia.ch` with the DNS name that you chose.
 ```sh
-openssl s_client -connect mypostalserver.mydomain.test:25 -starttls smtp
+openssl s_client -connect postal01test.arcmedia.ch:25 -starttls smtp
 ```
 
 You should see a response like the one below showing us that it is working.
@@ -241,7 +241,7 @@ The official documentation will be the best resource on how to do everything, bu
 ## If you need to make any adjustments
 If for some reason you need to make any special adjustments, see these files within the repoistory:
 
-1. `host_vars/mypostalserver.mydomain.test` (all variables you can change)
+1. `host_vars/postal01test.arcmedia.ch` (all variables you can change)
 1. `roles/postal/templates/opt/postal/config/postal.yml.j2` (the actual template that gets deployed)
 
 ## Asking for help

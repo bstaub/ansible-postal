@@ -5,14 +5,14 @@
 
 ### MySQL Database
 mysql_root_username: root
-mysql_root_password: x4Qa4Psgy2grz55ekTcQ2PfhjXzSd
+mysql_root_password: x4Qa4Psgy2grz55ekTcQ2PfhjXzSd123
 
 ################################
 # Postal main settings
 ################################
 
 # Web GUI domain (be sure to configure this DNS name to your primary/main IP **before** deployment)
-postal_web_host: mypostalserver.mydomain.test
+postal_web_host: postal01test.arcmedia.ch
 
 # This IP address is used for sending email and accessing the Web GUI
 postal_primary_ip_for_web_management: "1.2.3.4"
@@ -26,10 +26,10 @@ postal_secondary_ip_for_tracking_urls: "5.6.7.8"
 postal_main_db_host: 127.0.0.1
 postal_main_db_name: postal
 postal_main_db_username: postal
-postal_main_db_password: gmtxXXpMCanARgjhhG2g6Rq9JUdbq
+postal_main_db_password: gmtxXXpMCanARgjhhG2g6Rq9JUdbq123
 postal_rabbitmq_host: 127.0.0.1
 postal_rabbitmq_user: postal
-postal_rabbitmq_password: gmtxXXpMCanARgjhhG2g6Rq9JUdbq
+postal_rabbitmq_password: gmtxXXpMCanARgjhhG2g6Rq9JUdbq123
 postal_rabbitmq_vhost: postal
 
 ################################
@@ -51,4 +51,4 @@ postal_dns_track_domain: analytics.mydomain.test
 postal_smtp_host: smtp.mailgun.org
 postal_smtp_port: 587
 postal_smtp_username: mymailgunusername@mydomain.test
-postal_smtp_password: yD2CytcD9pHMkPP6RKrwm2Z9ZSn6b
+postal_smtp_password: yD2CytcD9pHMkPP6RKrwm2Z9ZSn6b123
